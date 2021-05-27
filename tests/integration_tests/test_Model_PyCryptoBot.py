@@ -35,13 +35,13 @@ def test_configjson_binance():
 
     try:
         config_json = json.dumps(config)
-        fh = open('/tmp/pycryptobot_pytest_config.json', 'w')
+        fh = open('tmp/pycryptobot_pytest_config.json', 'w')
         fh.write(config_json)
         fh.close()
     except Exception as err:
         print (err)
 
-    app = PyCryptoBot(filename='/tmp/pycryptobot_pytest_config.json')
+    app = PyCryptoBot(filename='tmp/pycryptobot_pytest_config.json')
     assert type(app) is PyCryptoBot
     assert app.getExchange() == 'binance'
 
@@ -56,14 +56,14 @@ def test_configjson_binance_invalid_api_url():
 
     try:
         config_json = json.dumps(config)
-        fh = open('/tmp/pycryptobot_pytest_config.json', 'w')
+        fh = open('tmp/pycryptobot_pytest_config.json', 'w')
         fh.write(config_json)
         fh.close()
     except Exception as err:
         print (err)
 
     with pytest.raises(ValueError) as execinfo:
-        PyCryptoBot(filename='/tmp/pycryptobot_pytest_config.json')
+        PyCryptoBot(filename='tmp/pycryptobot_pytest_config.json')
     assert str(execinfo.value) == 'Binance API URL is invalid'
 
 def test_configjson_binance_invalid_api_key():
@@ -77,14 +77,14 @@ def test_configjson_binance_invalid_api_key():
 
     try:
         config_json = json.dumps(config)
-        fh = open('/tmp/pycryptobot_pytest_config.json', 'w')
+        fh = open('tmp/pycryptobot_pytest_config.json', 'w')
         fh.write(config_json)
         fh.close()
     except Exception as err:
         print (err)
 
     with pytest.raises(TypeError) as execinfo:
-        PyCryptoBot(filename='/tmp/pycryptobot_pytest_config.json')
+        PyCryptoBot(filename='tmp/pycryptobot_pytest_config.json')
     assert str(execinfo.value) == 'Binance API key is invalid'
 
 def test_configjson_binance_invalid_api_secret():
@@ -98,14 +98,14 @@ def test_configjson_binance_invalid_api_secret():
 
     try:
         config_json = json.dumps(config)
-        fh = open('/tmp/pycryptobot_pytest_config.json', 'w')
+        fh = open('tmp/pycryptobot_pytest_config.json', 'w')
         fh.write(config_json)
         fh.close()
     except Exception as err:
         print (err)
 
     with pytest.raises(TypeError) as execinfo:
-        PyCryptoBot(filename='/tmp/pycryptobot_pytest_config.json')
+        PyCryptoBot(filename='tmp/pycryptobot_pytest_config.json')
     assert str(execinfo.value) == 'Binance API secret is invalid'
 
 def test_configjson_coinbasepro():
@@ -120,13 +120,13 @@ def test_configjson_coinbasepro():
 
     try:
         config_json = json.dumps(config)
-        fh = open('/tmp/pycryptobot_pytest_config.json', 'w')
+        fh = open('tmp/pycryptobot_pytest_config.json', 'w')
         fh.write(config_json)
         fh.close()
     except Exception as err:
         print (err)
 
-    app = PyCryptoBot(filename='/tmp/pycryptobot_pytest_config.json')
+    app = PyCryptoBot(filename='tmp/pycryptobot_pytest_config.json')
     assert type(app) is PyCryptoBot
     assert app.getExchange() == 'coinbasepro'
 
@@ -140,13 +140,13 @@ def test_configjson_coinbasepro_legacy():
 
     try:
         config_json = json.dumps(config)
-        fh = open('/tmp/pycryptobot_pytest_config.json', 'w')
+        fh = open('tmp/pycryptobot_pytest_config.json', 'w')
         fh.write(config_json)
         fh.close()
     except Exception as err:
         print (err)
 
-    app = PyCryptoBot(filename='/tmp/pycryptobot_pytest_config.json')
+    app = PyCryptoBot(filename='tmp/pycryptobot_pytest_config.json')
     assert type(app) is PyCryptoBot
     assert app.getExchange() == 'coinbasepro'
 
@@ -162,14 +162,14 @@ def test_configjson_coinbasepro_invalid_api_url():
 
     try:
         config_json = json.dumps(config)
-        fh = open('/tmp/pycryptobot_pytest_config.json', 'w')
+        fh = open('tmp/pycryptobot_pytest_config.json', 'w')
         fh.write(config_json)
         fh.close()
     except Exception as err:
         print (err)
 
     with pytest.raises(ValueError) as execinfo:
-        PyCryptoBot(filename='/tmp/pycryptobot_pytest_config.json')
+        PyCryptoBot(filename='tmp/pycryptobot_pytest_config.json')
     assert str(execinfo.value) == 'Coinbase Pro API URL is invalid'
 
 def test_configjson_coinbasepro_invalid_api_key():
@@ -184,14 +184,14 @@ def test_configjson_coinbasepro_invalid_api_key():
 
     try:
         config_json = json.dumps(config)
-        fh = open('/tmp/pycryptobot_pytest_config.json', 'w')
+        fh = open('tmp/pycryptobot_pytest_config.json', 'w')
         fh.write(config_json)
         fh.close()
     except Exception as err:
         print (err)
 
     with pytest.raises(TypeError) as execinfo:
-        PyCryptoBot(filename='/tmp/pycryptobot_pytest_config.json')
+        PyCryptoBot(filename='tmp/pycryptobot_pytest_config.json')
     assert str(execinfo.value) == 'Coinbase Pro API key is invalid'
 
 def test_configjson_coinbasepro_invalid_api_secret():
@@ -206,14 +206,14 @@ def test_configjson_coinbasepro_invalid_api_secret():
 
     try:
         config_json = json.dumps(config)
-        fh = open('/tmp/pycryptobot_pytest_config.json', 'w')
+        fh = open('tmp/pycryptobot_pytest_config.json', 'w')
         fh.write(config_json)
         fh.close()
     except Exception as err:
         print (err)
 
     with pytest.raises(TypeError) as execinfo:
-        PyCryptoBot(filename='/tmp/pycryptobot_pytest_config.json')
+        PyCryptoBot(filename='tmp/pycryptobot_pytest_config.json')
     assert str(execinfo.value) == 'Coinbase Pro API secret is invalid'
 
 def test_configjson_coinbasepro_invalid_api_passphrase():
@@ -228,14 +228,14 @@ def test_configjson_coinbasepro_invalid_api_passphrase():
 
     try:
         config_json = json.dumps(config)
-        fh = open('/tmp/pycryptobot_pytest_config.json', 'w')
+        fh = open('tmp/pycryptobot_pytest_config.json', 'w')
         fh.write(config_json)
         fh.close()
     except Exception as err:
         print (err)
 
     with pytest.raises(TypeError) as execinfo:
-        PyCryptoBot(filename='/tmp/pycryptobot_pytest_config.json')
+        PyCryptoBot(filename='tmp/pycryptobot_pytest_config.json')
     assert str(execinfo.value) == 'Coinbase Pro API passphrase is invalid'
 
 def test_configjson_binance_granularity():
@@ -252,17 +252,17 @@ def test_configjson_binance_granularity():
         granularity = '1m'
         config['binance']['config']['granularity'] = granularity
         config_json = json.dumps(config)
-        fh = open('/tmp/pycryptobot_pytest_config.json', 'w')
+        fh = open('tmp/pycryptobot_pytest_config.json', 'w')
         fh.write(config_json)
         fh.close()
 
-        app = PyCryptoBot(filename='/tmp/pycryptobot_pytest_config.json')
+        app = PyCryptoBot(filename='tmp/pycryptobot_pytest_config.json')
         assert type(app) is PyCryptoBot
         assert app.getExchange() == 'binance'
         assert app.getGranularity() == 60
 
-        if os.path.exists('/tmp/pycryptobot_pytest_config.json'):
-            os.remove('/tmp/pycryptobot_pytest_config.json')
+        if os.path.exists('tmp/pycryptobot_pytest_config.json'):
+            os.remove('tmp/pycryptobot_pytest_config.json')
     except Exception as err:
         print (err)
 
@@ -270,17 +270,17 @@ def test_configjson_binance_granularity():
         granularity = '5m'
         config['binance']['config']['granularity'] = granularity
         config_json = json.dumps(config)
-        fh = open('/tmp/pycryptobot_pytest_config.json', 'w')
+        fh = open('tmp/pycryptobot_pytest_config.json', 'w')
         fh.write(config_json)
         fh.close()
 
-        app = PyCryptoBot(filename='/tmp/pycryptobot_pytest_config.json')
+        app = PyCryptoBot(filename='tmp/pycryptobot_pytest_config.json')
         assert type(app) is PyCryptoBot
         assert app.getExchange() == 'binance'
         assert app.getGranularity() == 300
 
-        if os.path.exists('/tmp/pycryptobot_pytest_config.json'):
-            os.remove('/tmp/pycryptobot_pytest_config.json')
+        if os.path.exists('tmp/pycryptobot_pytest_config.json'):
+            os.remove('tmp/pycryptobot_pytest_config.json')
     except Exception as err:
         print (err)
 
@@ -288,17 +288,17 @@ def test_configjson_binance_granularity():
         granularity = '15m'
         config['binance']['config']['granularity'] = granularity
         config_json = json.dumps(config)
-        fh = open('/tmp/pycryptobot_pytest_config.json', 'w')
+        fh = open('tmp/pycryptobot_pytest_config.json', 'w')
         fh.write(config_json)
         fh.close()
 
-        app = PyCryptoBot(filename='/tmp/pycryptobot_pytest_config.json')
+        app = PyCryptoBot(filename='tmp/pycryptobot_pytest_config.json')
         assert type(app) is PyCryptoBot
         assert app.getExchange() == 'binance'
         assert app.getGranularity() == 900
 
-        if os.path.exists('/tmp/pycryptobot_pytest_config.json'):
-            os.remove('/tmp/pycryptobot_pytest_config.json')
+        if os.path.exists('tmp/pycryptobot_pytest_config.json'):
+            os.remove('tmp/pycryptobot_pytest_config.json')
     except Exception as err:
         print (err)
 
@@ -306,17 +306,17 @@ def test_configjson_binance_granularity():
         granularity = '1h'
         config['binance']['config']['granularity'] = granularity
         config_json = json.dumps(config)
-        fh = open('/tmp/pycryptobot_pytest_config.json', 'w')
+        fh = open('tmp/pycryptobot_pytest_config.json', 'w')
         fh.write(config_json)
         fh.close()
 
-        app = PyCryptoBot(filename='/tmp/pycryptobot_pytest_config.json')
+        app = PyCryptoBot(filename='tmp/pycryptobot_pytest_config.json')
         assert type(app) is PyCryptoBot
         assert app.getExchange() == 'binance'
         assert app.getGranularity() == 3600
 
-        if os.path.exists('/tmp/pycryptobot_pytest_config.json'):
-            os.remove('/tmp/pycryptobot_pytest_config.json')
+        if os.path.exists('tmp/pycryptobot_pytest_config.json'):
+            os.remove('tmp/pycryptobot_pytest_config.json')
     except Exception as err:
         print (err)
 
@@ -324,17 +324,17 @@ def test_configjson_binance_granularity():
         granularity = '6h'
         config['binance']['config']['granularity'] = granularity
         config_json = json.dumps(config)
-        fh = open('/tmp/pycryptobot_pytest_config.json', 'w')
+        fh = open('tmp/pycryptobot_pytest_config.json', 'w')
         fh.write(config_json)
         fh.close()
 
-        app = PyCryptoBot(filename='/tmp/pycryptobot_pytest_config.json')
+        app = PyCryptoBot(filename='tmp/pycryptobot_pytest_config.json')
         assert type(app) is PyCryptoBot
         assert app.getExchange() == 'binance'
         assert app.getGranularity() == 21600
 
-        if os.path.exists('/tmp/pycryptobot_pytest_config.json'):
-            os.remove('/tmp/pycryptobot_pytest_config.json')
+        if os.path.exists('tmp/pycryptobot_pytest_config.json'):
+            os.remove('tmp/pycryptobot_pytest_config.json')
     except Exception as err:
         print (err)
 
@@ -342,17 +342,17 @@ def test_configjson_binance_granularity():
         granularity = '1d'
         config['binance']['config']['granularity'] = granularity
         config_json = json.dumps(config)
-        fh = open('/tmp/pycryptobot_pytest_config.json', 'w')
+        fh = open('tmp/pycryptobot_pytest_config.json', 'w')
         fh.write(config_json)
         fh.close()
 
-        app = PyCryptoBot(filename='/tmp/pycryptobot_pytest_config.json')
+        app = PyCryptoBot(filename='tmp/pycryptobot_pytest_config.json')
         assert type(app) is PyCryptoBot
         assert app.getExchange() == 'binance'
         assert app.getGranularity() == 86400
 
-        if os.path.exists('/tmp/pycryptobot_pytest_config.json'):
-            os.remove('/tmp/pycryptobot_pytest_config.json')
+        if os.path.exists('tmp/pycryptobot_pytest_config.json'):
+            os.remove('tmp/pycryptobot_pytest_config.json')
     except Exception as err:
         print (err)
 
@@ -369,19 +369,19 @@ def test_configjson_binance_invalid_granularity():
     try:
         config['binance']['config']['granularity'] = 60
         config_json = json.dumps(config)
-        fh = open('/tmp/pycryptobot_pytest_config.json', 'w')
+        fh = open('tmp/pycryptobot_pytest_config.json', 'w')
         fh.write(config_json)
         fh.close()
     except Exception as err:
         print (err)
 
-    app = PyCryptoBot(filename='/tmp/pycryptobot_pytest_config.json')
+    app = PyCryptoBot(filename='tmp/pycryptobot_pytest_config.json')
     assert type(app) is PyCryptoBot
     assert app.getExchange() == 'binance'
     assert app.getGranularity() == 3600 # default if invalid
 
-    if os.path.exists('/tmp/pycryptobot_pytest_config.json'):
-        os.remove('/tmp/pycryptobot_pytest_config.json')
+    if os.path.exists('tmp/pycryptobot_pytest_config.json'):
+        os.remove('tmp/pycryptobot_pytest_config.json')
 
 def test_configjson_coinbasepro_granularity():
     config = {
@@ -398,17 +398,17 @@ def test_configjson_coinbasepro_granularity():
         granularity = 60
         config['coinbasepro']['config']['granularity'] = granularity
         config_json = json.dumps(config)
-        fh = open('/tmp/pycryptobot_pytest_config.json', 'w')
+        fh = open('tmp/pycryptobot_pytest_config.json', 'w')
         fh.write(config_json)
         fh.close()
 
-        app = PyCryptoBot(filename='/tmp/pycryptobot_pytest_config.json')
+        app = PyCryptoBot(filename='tmp/pycryptobot_pytest_config.json')
         assert type(app) is PyCryptoBot
         assert app.getExchange() == 'coinbasepro'
         assert app.getGranularity() == granularity
 
-        if os.path.exists('/tmp/pycryptobot_pytest_config.json'):
-            os.remove('/tmp/pycryptobot_pytest_config.json')
+        if os.path.exists('tmp/pycryptobot_pytest_config.json'):
+            os.remove('tmp/pycryptobot_pytest_config.json')
     except Exception as err:
         print (err)
 
@@ -416,17 +416,17 @@ def test_configjson_coinbasepro_granularity():
         granularity = 300
         config['coinbasepro']['config']['granularity'] = granularity
         config_json = json.dumps(config)
-        fh = open('/tmp/pycryptobot_pytest_config.json', 'w')
+        fh = open('tmp/pycryptobot_pytest_config.json', 'w')
         fh.write(config_json)
         fh.close()
 
-        app = PyCryptoBot(filename='/tmp/pycryptobot_pytest_config.json')
+        app = PyCryptoBot(filename='tmp/pycryptobot_pytest_config.json')
         assert type(app) is PyCryptoBot
         assert app.getExchange() == 'coinbasepro'
         assert app.getGranularity() == granularity
 
-        if os.path.exists('/tmp/pycryptobot_pytest_config.json'):
-            os.remove('/tmp/pycryptobot_pytest_config.json')
+        if os.path.exists('tmp/pycryptobot_pytest_config.json'):
+            os.remove('tmp/pycryptobot_pytest_config.json')
     except Exception as err:
         print (err)
 
@@ -434,17 +434,17 @@ def test_configjson_coinbasepro_granularity():
         granularity = 900
         config['coinbasepro']['config']['granularity'] = granularity
         config_json = json.dumps(config)
-        fh = open('/tmp/pycryptobot_pytest_config.json', 'w')
+        fh = open('tmp/pycryptobot_pytest_config.json', 'w')
         fh.write(config_json)
         fh.close()
 
-        app = PyCryptoBot(filename='/tmp/pycryptobot_pytest_config.json')
+        app = PyCryptoBot(filename='tmp/pycryptobot_pytest_config.json')
         assert type(app) is PyCryptoBot
         assert app.getExchange() == 'coinbasepro'
         assert app.getGranularity() == granularity
 
-        if os.path.exists('/tmp/pycryptobot_pytest_config.json'):
-            os.remove('/tmp/pycryptobot_pytest_config.json')
+        if os.path.exists('tmp/pycryptobot_pytest_config.json'):
+            os.remove('tmp/pycryptobot_pytest_config.json')
     except Exception as err:
         print (err)
 
@@ -452,17 +452,17 @@ def test_configjson_coinbasepro_granularity():
         granularity = 3600
         config['coinbasepro']['config']['granularity'] = granularity
         config_json = json.dumps(config)
-        fh = open('/tmp/pycryptobot_pytest_config.json', 'w')
+        fh = open('tmp/pycryptobot_pytest_config.json', 'w')
         fh.write(config_json)
         fh.close()
 
-        app = PyCryptoBot(filename='/tmp/pycryptobot_pytest_config.json')
+        app = PyCryptoBot(filename='tmp/pycryptobot_pytest_config.json')
         assert type(app) is PyCryptoBot
         assert app.getExchange() == 'coinbasepro'
         assert app.getGranularity() == granularity
 
-        if os.path.exists('/tmp/pycryptobot_pytest_config.json'):
-            os.remove('/tmp/pycryptobot_pytest_config.json')
+        if os.path.exists('tmp/pycryptobot_pytest_config.json'):
+            os.remove('tmp/pycryptobot_pytest_config.json')
     except Exception as err:
         print (err)
 
@@ -470,17 +470,17 @@ def test_configjson_coinbasepro_granularity():
         granularity = 21600
         config['coinbasepro']['config']['granularity'] = granularity
         config_json = json.dumps(config)
-        fh = open('/tmp/pycryptobot_pytest_config.json', 'w')
+        fh = open('tmp/pycryptobot_pytest_config.json', 'w')
         fh.write(config_json)
         fh.close()
 
-        app = PyCryptoBot(filename='/tmp/pycryptobot_pytest_config.json')
+        app = PyCryptoBot(filename='tmp/pycryptobot_pytest_config.json')
         assert type(app) is PyCryptoBot
         assert app.getExchange() == 'coinbasepro'
         assert app.getGranularity() == granularity
 
-        if os.path.exists('/tmp/pycryptobot_pytest_config.json'):
-            os.remove('/tmp/pycryptobot_pytest_config.json')
+        if os.path.exists('tmp/pycryptobot_pytest_config.json'):
+            os.remove('tmp/pycryptobot_pytest_config.json')
     except Exception as err:
         print (err)
 
@@ -488,17 +488,17 @@ def test_configjson_coinbasepro_granularity():
         granularity = 86400
         config['coinbasepro']['config']['granularity'] = granularity
         config_json = json.dumps(config)
-        fh = open('/tmp/pycryptobot_pytest_config.json', 'w')
+        fh = open('tmp/pycryptobot_pytest_config.json', 'w')
         fh.write(config_json)
         fh.close()
 
-        app = PyCryptoBot(filename='/tmp/pycryptobot_pytest_config.json')
+        app = PyCryptoBot(filename='tmp/pycryptobot_pytest_config.json')
         assert type(app) is PyCryptoBot
         assert app.getExchange() == 'coinbasepro'
         assert app.getGranularity() == granularity
 
-        if os.path.exists('/tmp/pycryptobot_pytest_config.json'):
-            os.remove('/tmp/pycryptobot_pytest_config.json')
+        if os.path.exists('tmp/pycryptobot_pytest_config.json'):
+            os.remove('tmp/pycryptobot_pytest_config.json')
     except Exception as err:
         print (err)
 
@@ -516,19 +516,19 @@ def test_configjson_coinbasepro_invalid_granularity():
     try:
         config['coinbasepro']['config']['granularity'] = '1m'
         config_json = json.dumps(config)
-        fh = open('/tmp/pycryptobot_pytest_config.json', 'w')
+        fh = open('tmp/pycryptobot_pytest_config.json', 'w')
         fh.write(config_json)
         fh.close()
     except Exception as err:
         print (err)
 
-    app = PyCryptoBot(filename='/tmp/pycryptobot_pytest_config.json')
+    app = PyCryptoBot(filename='tmp/pycryptobot_pytest_config.json')
     assert type(app) is PyCryptoBot
     assert app.getExchange() == 'coinbasepro'
     assert app.getGranularity() == 3600 # default if invalid
 
-    if os.path.exists('/tmp/pycryptobot_pytest_config.json'):
-        os.remove('/tmp/pycryptobot_pytest_config.json')
+    if os.path.exists('tmp/pycryptobot_pytest_config.json'):
+        os.remove('tmp/pycryptobot_pytest_config.json')
 
 def test_configjson_islive():
     config = {
@@ -543,13 +543,13 @@ def test_configjson_islive():
 
     try:
         config_json = json.dumps(config)
-        fh = open('/tmp/pycryptobot_pytest_config.json', 'w')
+        fh = open('tmp/pycryptobot_pytest_config.json', 'w')
         fh.write(config_json)
         fh.close()
     except Exception as err:
         print (err)
 
-    app = PyCryptoBot(filename='/tmp/pycryptobot_pytest_config.json')
+    app = PyCryptoBot(filename='tmp/pycryptobot_pytest_config.json')
     assert type(app) is PyCryptoBot
     assert app.getExchange() == 'coinbasepro'
     assert not app.isLive()
@@ -557,21 +557,21 @@ def test_configjson_islive():
     try:
         config['coinbasepro']['config']['live'] = 1
         config_json = json.dumps(config)
-        fh = open('/tmp/pycryptobot_pytest_config.json', 'w')
+        fh = open('tmp/pycryptobot_pytest_config.json', 'w')
         fh.write(config_json)
         fh.close()
     except Exception as err:
         print (err)
 
-    app = PyCryptoBot(filename='/tmp/pycryptobot_pytest_config.json')
+    app = PyCryptoBot(filename='tmp/pycryptobot_pytest_config.json')
     assert type(app) is PyCryptoBot
     assert app.isLive()
 
     app.setLive(0)
     assert not app.isLive()
 
-    if os.path.exists('/tmp/pycryptobot_pytest_config.json'):
-        os.remove('/tmp/pycryptobot_pytest_config.json')
+    if os.path.exists('tmp/pycryptobot_pytest_config.json'):
+        os.remove('tmp/pycryptobot_pytest_config.json')
 
 def test_configjson_graphs():
     config = {
@@ -586,13 +586,13 @@ def test_configjson_graphs():
 
     try:
         config_json = json.dumps(config)
-        fh = open('/tmp/pycryptobot_pytest_config.json', 'w')
+        fh = open('tmp/pycryptobot_pytest_config.json', 'w')
         fh.write(config_json)
         fh.close()
     except Exception as err:
         print (err)
 
-    app = PyCryptoBot(filename='/tmp/pycryptobot_pytest_config.json')
+    app = PyCryptoBot(filename='tmp/pycryptobot_pytest_config.json')
     assert type(app) is PyCryptoBot
     assert app.getExchange() == 'coinbasepro'
     assert not app.shouldSaveGraphs()
@@ -600,19 +600,19 @@ def test_configjson_graphs():
     try:
         config['coinbasepro']['config']['graphs'] = 1
         config_json = json.dumps(config)
-        fh = open('/tmp/pycryptobot_pytest_config.json', 'w')
+        fh = open('tmp/pycryptobot_pytest_config.json', 'w')
         fh.write(config_json)
         fh.close()
     except Exception as err:
         print (err)
 
-    app = PyCryptoBot(filename='/tmp/pycryptobot_pytest_config.json')
+    app = PyCryptoBot(filename='tmp/pycryptobot_pytest_config.json')
     assert type(app) is PyCryptoBot
     assert app.getExchange() == 'coinbasepro'
     assert app.shouldSaveGraphs()
 
-    if os.path.exists('/tmp/pycryptobot_pytest_config.json'):
-        os.remove('/tmp/pycryptobot_pytest_config.json')
+    if os.path.exists('tmp/pycryptobot_pytest_config.json'):
+        os.remove('tmp/pycryptobot_pytest_config.json')
 
 def test_configjson_isverbose():
     config = {
@@ -627,13 +627,13 @@ def test_configjson_isverbose():
 
     try:
         config_json = json.dumps(config)
-        fh = open('/tmp/pycryptobot_pytest_config.json', 'w')
+        fh = open('tmp/pycryptobot_pytest_config.json', 'w')
         fh.write(config_json)
         fh.close()
     except Exception as err:
         print (err)
 
-    app = PyCryptoBot(filename='/tmp/pycryptobot_pytest_config.json')
+    app = PyCryptoBot(filename='tmp/pycryptobot_pytest_config.json')
     assert type(app) is PyCryptoBot
     assert app.getExchange() == 'coinbasepro'
     assert app.isVerbose()
@@ -641,16 +641,16 @@ def test_configjson_isverbose():
     try:
         config['coinbasepro']['config']['verbose'] = 1
         config_json = json.dumps(config)
-        fh = open('/tmp/pycryptobot_pytest_config.json', 'w')
+        fh = open('tmp/pycryptobot_pytest_config.json', 'w')
         fh.write(config_json)
         fh.close()
     except Exception as err:
         print (err)
 
-    app = PyCryptoBot(filename='/tmp/pycryptobot_pytest_config.json')
+    app = PyCryptoBot(filename='tmp/pycryptobot_pytest_config.json')
     assert type(app) is PyCryptoBot
     assert app.getExchange() == 'coinbasepro'
     assert not app.isVerbose()
 
-    if os.path.exists('/tmp/pycryptobot_pytest_config.json'):
-        os.remove('/tmp/pycryptobot_pytest_config.json')
+    if os.path.exists('tmp/pycryptobot_pytest_config.json'):
+        os.remove('tmp/pycryptobot_pytest_config.json')
